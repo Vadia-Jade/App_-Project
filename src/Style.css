@@ -1,3 +1,16 @@
 body{
-    background: linear-gradient(280.3deg, rgb(214, 224, 255) 37.2%, rgb(254, 168, 168) 137.3%); 
+    background: linear-gradient(280.3deg, rgb(214, 224, 255) 37.2%, rgb(254, 168, 168) 137.3%);
+
+        font-family: "Oswald", sans-serif; 
+        font-weight: 600;
+       
+}
+.app-container{
+    background: white;
+    max-width: 700px;
+    margin: 40px auto;
+    box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+    border-radius: 20px;
+    padding: 50px;
+    
 }
