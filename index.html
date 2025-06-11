@@ -12,26 +12,29 @@
 <body>
   <div class="app-container">
     <header>
-        <h1>
-            Todays Weather in
-            </h1>
-       <form>
-        <input type="search" placeholder="Enter a City.." required/>
-        <input type="submit" value="search"/>
+       <form class="form-search">
+        <input type="search" placeholder="Enter a City.." required class="search-input"/>
+        <input type="submit" value="search" class="form-button"/>
        </form>
     </header>
     <main>
-      <div>
-    <p>
-        <h2>Paris</h2>
-        Saturday 15:32, moderate rain
-         <br />
-        Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
-    </p>
-    </div>
-    <div>
-       ☀️ 14°C
-    </div>
+      <h1>
+        Todays Weather in
+      </h1>
+      <div class="weather-data">
+        <div>
+             <h2 class="city-data">Paris</h2>
+            <p class="weather-details">
+              Saturday 15:32, moderate rain
+              <br />
+              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+           </p>
+       </div>
+       <div class="temperature-container">
+          <div class="weather-icon">☀️</div>
+          <div class="app-temp"> 14 </div>
+           <div class="weather-unit"> °C</div>  
+        </div>
    </main>
     <footer>
      This Project was Coded by
