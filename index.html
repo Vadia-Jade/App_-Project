@@ -12,8 +12,8 @@
 <body>
   <div class="app-container">
     <header>
-       <form class="form-search">
-        <input type="search" placeholder="Enter a City.." required class="search-input"/>
+       <form class="form-search" id="form-search">
+        <input type="search" placeholder="Enter a City.." required id="search-input" class="search-input"/>
         <input type="submit" value="search" class="form-button"/>
        </form>
     </header>
@@ -23,7 +23,7 @@
       </h1>
       <div class="weather-data">
         <div>
-             <h2 class="city-data">Paris</h2>
+             <h2 class="city-data" id="data-city">Paris</h2>
             <p class="weather-details">
               Saturday 15:32, moderate rain
               <br />
@@ -43,5 +43,6 @@
      and hosted on <a href="https://project-appweather.netlify.app" target="_blank">Netlify</a>.
     </footer>
   </div>
+  <script src="src/weather.js"></script>
 </body>
 </html>
