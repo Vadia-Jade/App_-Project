@@ -60,16 +60,17 @@ main{
     display: flex;
 }
 .weather-icon{
-    font-size: 40px;
-    margin-top: 17px;
+    width: 80px;
+    height: 80px;
 }
 .app-temp { 
-    font-size: 60px;
+    font-size: 89px;
     margin-left: 10px;
+    line-height: 89px;
     font-weight: bold;
 }
 .weather-unit{
-    margin-top: 18px;
+    margin-top: 8px;
     font-size: 27px;
 }
 
