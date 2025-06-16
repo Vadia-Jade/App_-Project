@@ -69,14 +69,14 @@ main{
     line-height: 89px;
     font-weight: bold;
 }
-.weather-unit{
+.weather-unit {
     margin-top: 8px;
     font-size: 27px;
 }
-.weather-forecast{
+.weather-forecast {
     display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
+   justify-content: space-around;
+    margin-top: 30px;
 }
 .forecast-date{
     text-align: center;
@@ -94,6 +94,7 @@ main{
     color: #f65282;
     display: flex;
     justify-content: center;
+   
 }
 .forecast-temperature{
     padding: 10px;

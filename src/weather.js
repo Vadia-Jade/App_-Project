@@ -51,6 +51,30 @@ function handleSearchSubmit(event) {
    event.preventDefault();
    let searchInput = document.querySelector("#search-input");
  
-   searchCity(searchInput.value);}
+   searchCity(searchInput.value);
+  }
+  
+  function displayForecast() {
+    let forecastElement = document.querySelector("#forecast");
+    let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
+    let forecastHtml = "";
+    days.forEach(function(day) {
+      forecastHtml = forecastHtml +
+          `
+           <div class="forecast-day">
+             <div class="forecast-date">${day}</div>
+             <div class="forecast-icon">☀️</div>
+             <div class="weather-forecast-temperatures">
+               <div class="forecast-temperature"><strong>16°</strong></div>
+               <div class="forecast-temperature">9°</div>
+              </div>
+            </div>
+          `;
+    });
+   
+   forecastElement.innerHTML = forecastHtml;
+  }
+
 let formSearchElement = document.querySelector("#form-search");
 formSearchElement.addEventListener("submit", handleSearchSubmit);
+displayForecast();
