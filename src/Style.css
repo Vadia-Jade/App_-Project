@@ -73,6 +73,31 @@ main{
     margin-top: 8px;
     font-size: 27px;
 }
+.weather-forecast{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.forecast-date{
+    text-align: center;
+    color: rgba(39,33,66,0.6);
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 12px;
+}
+.forecast-icon{
+    text-align: center;
+    font-size: 40px;
+}
+.weather-forecast-temperatures{
+    text-align: center;
+    color: #f65282;
+    display: flex;
+    justify-content: center;
+}
+.forecast-temperature{
+    padding: 10px;
+}
 
 footer{
     border-top: 1px dotted rgb(216, 188, 242);
