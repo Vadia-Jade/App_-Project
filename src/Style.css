@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(280.3deg, rgb(214, 224, 255) 37.2%, rgb(254, 168, 168) 137.3%);
+    background:linear-gradient(to top,#f7d2bd 10%, #dab6ea 49%, #a8acf3 100%);
 
         font-family: "Oswald", sans-serif; 
         font-weight: 600;    
@@ -8,10 +8,10 @@ a {
    color: rgb(82, 35, 126);
 }
 .app-container{
-    background: white;
+    background: linear-gradient(179.7deg, rgb(248, 126, 126) -0.5%, rgb(251, 206, 143) 35.3%, rgb(184, 252, 233) 67.2%, rgb(118, 162, 229) 92.3%);;
     max-width: 700px;
-    margin: 40px auto;
-    box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+    margin: 40px auto 76px;
+    box-shadow: 0 30px 50px rgba(65, 50, 100, 0.06);
     border-radius: 20px;
     padding: 50px;
     

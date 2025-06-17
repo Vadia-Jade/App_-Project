@@ -93,7 +93,7 @@ function handleSearchSubmit(event) {
  formSearchElement.addEventListener("submit", handleSearchSubmit);
 
 
-searchCity("Paris");
+searchCity("Manchester");
 
 
 
