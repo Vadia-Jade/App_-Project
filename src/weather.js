@@ -88,12 +88,61 @@ function handleSearchSubmit(event) {
     let forecastElement = document.querySelector("#forecast");
    forecastElement.innerHTML = forecastHtml;
   }
+
+  function getLocationAndSetTheme() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+       const lat = position.coords.latitude;
+       const lon = position.coords.longitude;
+       getSunTimes(lat, lon);
+     
+    });
+   } else {
+    console.warn("Geolocation is not supported by this browser.");
+   }
+  }
+
+  function displaySunTimes(sunriseUTC, sunsetUTC) {
+    const sunriseLocal = new Date(sunriseUTC).toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    const sunsetLocal = new Date(sunsetUTC).toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  
+    document.querySelector("#sunrise-time").textContent = sunriseLocal;
+    document.querySelector("#sunset-time").textContent = sunsetLocal;
+  }
+
+  function getSunTimes(lat, lon) {
+    const apiUrl =`https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lon}&formatted=0`;
+  
+    axios.get(apiUrl).then((response) => {
+      const sunriseUTC = new Date(response.data.results.sunrise);
+      const sunsetUTC = new Date(response.data.results.sunset);
+      const now = new Date();
+  
+      displaySunTimes(sunriseUTC, sunsetUTC); 
+  
+      const isNight = now < sunriseUTC || now > sunsetUTC;
+  
+      if (isNight) {
+        document.body.classList.add("night-mode");
+      } else {
+        document.body.classList.remove("night-mode");
+      }
+      console.log(`Sunrise: ${sunriseLocal}, Sunset: ${sunsetLocal}, Night Mode: ${isNight}`);
+    }); 
+}
  
  let formSearchElement = document.querySelector("#form-search");
  formSearchElement.addEventListener("submit", handleSearchSubmit);
 
 
 searchCity("Manchester");
-
+getLocationAndSetTheme();
+setInterval(getLocationAndSetTheme, 60 * 60 * 1000); 
 
 

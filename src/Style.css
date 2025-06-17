@@ -4,8 +4,27 @@ body{
         font-family: "Oswald", sans-serif; 
         font-weight: 600;    
 }
+body.night-mode {
+    background: linear-gradient(to top, #f7d2bd 10%, #dab6ea 49%, #a8acf3 100%);
+    color: #f0f0f0;
+}
+
+body.night-mode .app-container {
+    background: linear-gradient(179.2deg, rgb(34, 34, 34) 0%, rgb(8, 0, 153) 29.7%, rgb(118, 6, 166) 63.4%, rgba(233, 0, 64, 0.58) 100.1%);
+}
+
+body.night-mode .search-input,
+body.night-mode .form-button {
+    background-color:rgb(67, 62, 154);
+    color: #f0f0f0;
+    border: 1px solid #555;
+}
+.night-mode .weather-forecast-temperatures{
+    color: #021445;
+}
+
 a {
-   color: rgb(82, 35, 126);
+    color: rgb(82, 35, 126);
 }
 .app-container{
     background: linear-gradient(179.7deg, rgb(248, 126, 126) -0.5%, rgb(251, 206, 143) 35.3%, rgb(184, 252, 233) 67.2%, rgb(118, 162, 229) 92.3%);;
@@ -28,8 +47,8 @@ header{
     font-size: 17px;
     padding: 15px 20px;
 }
-.form-button{
-    background-color:rgb(214, 224, 255);
+.form-button  {
+    background-color: rgb(214, 224, 255);
     padding: 15px 30px;
     border: none;
     margin-left: 10px;
@@ -73,6 +92,10 @@ main{
     margin-top: 8px;
     font-size: 27px;
 }
+h3{
+    text-align: center;
+    font-size: 20px;
+}
 .weather-forecast {
     display: flex;
    justify-content: space-around;
@@ -94,8 +117,8 @@ main{
     color: #f65282;
     display: flex;
     justify-content: center;
-   
 }
+
 .forecast-temperature{
     padding: 10px;
 }
