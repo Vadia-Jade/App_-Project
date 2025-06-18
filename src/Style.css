@@ -15,12 +15,12 @@ body.night-mode .app-container {
 
 body.night-mode .search-input,
 body.night-mode .form-button {
-    background-color:rgb(67, 62, 154);
+    background-color:#e752771c;
     color: #f0f0f0;
     border: 1px solid #555;
 }
 .night-mode .weather-forecast-temperatures{
-    color: #021445;
+    color: #bdcefc;
 }
 
 a {
