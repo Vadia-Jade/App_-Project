@@ -140,7 +140,6 @@ function handleSearchSubmit(event) {
  let formSearchElement = document.querySelector("#form-search");
  formSearchElement.addEventListener("submit", handleSearchSubmit);
 
-
 searchCity("Manchester");
 getLocationAndSetTheme();
 setInterval(getLocationAndSetTheme, 60 * 60 * 1000); 
